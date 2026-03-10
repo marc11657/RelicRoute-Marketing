@@ -915,6 +915,33 @@ ul {
   stroke: var(--brand-bronze);
 }
 
+/* Help Intro */
+.help-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 28px 24px;
+  background: var(--white);
+  border: 1px solid rgba(43, 36, 29, 0.08);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--charcoal-earth);
+}
+
+.help-intro ul {
+  padding-left: 20px;
+  margin: 12px 0;
+  list-style: disc;
+}
+
+.help-intro li {
+  margin-bottom: 6px;
+}
+
+.help-intro p:last-child {
+  margin-bottom: 0;
+}
+
 /* Platform Content */
 .platform-content {
   display: none;
