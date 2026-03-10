@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact RelicRoute — Get in touch with our support team for help with the app, partnership enquiries, or general questions.">
+  <title>Contact Us — RelicRoute</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="RelicRoute Logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="relicroute-logo.png" alt="RelicRoute" width="200" height="auto">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="help.html">Help Guides</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="index.html#pricing" class="btn btn-bronze btn-sm">Download Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+      <div class="contour-bg" aria-hidden="true"></div>
+      <div class="container page-hero-content">
+        <h1 class="page-hero-headline">Get in Touch</h1>
+        <p class="page-hero-sub">Have a question, suggestion, or need help with RelicRoute? We&rsquo;d love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <h2 class="contact-heading">Send Us a Message</h2>
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/support@relicroute.co.uk" method="POST">
+              <input type="hidden" name="_subject" value="New message from RelicRoute website">
+              <input type="hidden" name="_captcha" value="true">
+              <input type="hidden" name="_next" value="">
+              <input type="text" name="_honey" style="display:none" aria-hidden="true">
+
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="e.g. John Smith" autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="e.g. john@example.com" autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="App Support">App Support</option>
+                  <option value="Bug Report">Bug Report</option>
+                  <option value="Feature Request">Feature Request</option>
+                  <option value="Partnership">Partnership / Business</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required rows="6" placeholder="Tell us how we can help..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-bronze btn-lg contact-submit">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <aside class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C9965C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="6" width="26" height="20" rx="3"/>
+                  <path d="M3 9l13 8 13-8"/>
+                </svg>
+              </div>
+              <h3>Email Us Directly</h3>
+              <p>Prefer to email? Reach our support team at:</p>
+              <a href="mailto:support@relicroute.co.uk" class="contact-email-link">support@relicroute.co.uk</a>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C9965C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="16" cy="16" r="12"/>
+                  <path d="M16 10v6l4 2"/>
+                </svg>
+              </div>
+              <h3>Response Time</h3>
+              <p>We aim to respond to all enquiries within <strong>24 hours</strong> during business days.</p>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C9965C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 20l-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H12z"/>
+                  <path d="M12 12h8M12 16h5"/>
+                </svg>
+              </div>
+              <h3>Help Guides</h3>
+              <p>Looking for app instructions? Check our <a href="help.html">Help Guides</a> for step-by-step tutorials.</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="relicroute-logo.png" alt="RelicRoute" class="footer-logo" width="160">
+        <p class="footer-tagline">AI-powered detecting spot recommendations for the UK.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help Guides</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 RelicRoute. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

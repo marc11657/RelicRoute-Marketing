@@ -46,6 +46,41 @@
     });
   });
 
+  // Platform tabs (Help page)
+  const platformTabs = document.querySelectorAll('.platform-tab');
+  if (platformTabs.length) {
+    platformTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update tabs
+        platformTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        // Update content
+        document.querySelectorAll('.platform-content').forEach(panel => {
+          panel.classList.remove('active');
+          panel.hidden = true;
+        });
+        const target = document.getElementById(tab.getAttribute('aria-controls'));
+        if (target) {
+          target.classList.add('active');
+          target.hidden = false;
+        }
+      });
+    });
+  }
+
+  // Accordion toggles (Help page)
+  document.querySelectorAll('.help-article-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+
   // Scroll-reveal animations via Intersection Observer
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
