@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RelicRoute Help Guide — Learn how to use RelicRoute on iOS and Android to find promising metal detecting locations.">
+  <title>Help Guide — RelicRoute</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="RelicRoute Logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="relicroute-logo.png" alt="RelicRoute" width="200" height="auto">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="help.html">Help Guides</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="index.html#pricing" class="btn btn-bronze btn-sm">Download Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Help Hero -->
+    <section class="page-hero">
+      <div class="contour-bg" aria-hidden="true"></div>
+      <div class="container page-hero-content">
+        <h1 class="page-hero-headline">Help Guide</h1>
+        <p class="page-hero-sub">RelicRoute helps you scout promising metal detecting locations faster by combining map data, recorded finds, terrain clues, historic mapping, and legal indicators into one place. Choose your platform below.</p>
+      </div>
+    </section>
+
+    <!-- Platform Tabs -->
+    <section class="help-section">
+      <div class="container">
+
+        <div class="platform-tabs" role="tablist" aria-label="Select platform">
+          <button class="platform-tab active" role="tab" aria-selected="true" aria-controls="ios-content" id="ios-tab" data-platform="ios">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M12 6v2M12 16v2M12 10a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+            </svg>
+            iOS
+          </button>
+          <button class="platform-tab" role="tab" aria-selected="false" aria-controls="android-content" id="android-tab" data-platform="android">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="10" width="14" height="10" rx="2"/>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+              <path d="M3 14h2M19 14h2"/>
+              <circle cx="9.5" cy="14" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="14.5" cy="14" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Android
+          </button>
+        </div>
+
+        <!-- iOS Content -->
+        <div class="platform-content active" id="ios-content" role="tabpanel" aria-labelledby="ios-tab">
+
+          <!-- Welcome -->
+          <div class="help-intro">
+            <p>The app is designed to help you:</p>
+            <ul>
+              <li>Discover promising spots near your chosen location</li>
+              <li>Compare areas using different map layers</li>
+              <li>Understand why a spot has been recommended</li>
+              <li>Save places you want to revisit</li>
+              <li>Avoid obvious protected or restricted areas</li>
+            </ul>
+            <p>RelicRoute is a planning tool. It helps you narrow down where to look next, but it does not replace landowner permission, local checks, or responsible detecting.</p>
+          </div>
+
+          <!-- Getting Started -->
+          <div class="help-category">
+            <h2 class="help-category-title">Getting Started</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Installing RelicRoute on iPhone or iPad</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <ol>
+                  <li>Open the <strong>App Store</strong> on your iPhone or iPad.</li>
+                  <li>Tap the <strong>Search</strong> tab and type <strong>&ldquo;RelicRoute&rdquo;</strong>.</li>
+                  <li>Tap <strong>Get</strong> next to the RelicRoute app (look for our green and bronze logo).</li>
+                  <li>Authenticate with Face ID, Touch ID, or your Apple ID password if prompted.</li>
+                  <li>Once installed, tap <strong>Open</strong> to launch the app.</li>
+                </ol>
+                <p><strong>Requirements:</strong> iOS 16.0 or later. Compatible with iPhone and iPad.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Quick Start</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <ol>
+                  <li><strong>Set your location</strong> &mdash; When you first open RelicRoute, choose how you want to search:
+                    <ul>
+                      <li><strong>Enter a postcode:</strong> Type in a UK postcode and tap Search.</li>
+                      <li><strong>Use GPS:</strong> Tap &ldquo;Use my GPS location&rdquo; to search around your current position.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Review the map</strong> &mdash; On the Explore screen, RelicRoute searches within roughly 5&nbsp;km of your selected location and places markers on the map for recommended spots.</li>
+                  <li><strong>Open a spot</strong> &mdash; Tap a marker to see a quick preview, then tap &ldquo;View details&rdquo; to open the full recommendation.</li>
+                  <li><strong>Save the best ones</strong> &mdash; If you are signed in, tap the star on a recommendation to save it for later.</li>
+                </ol>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Enabling Location Services</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute needs location access to show nearby detecting spots and provide accurate recommendations.</p>
+                <ol>
+                  <li>When prompted, tap <strong>&ldquo;Allow While Using App&rdquo;</strong> for location access.</li>
+                  <li>If you previously denied access, go to <strong>Settings &gt; Privacy &amp; Security &gt; Location Services &gt; RelicRoute</strong> and select <strong>&ldquo;While Using the App&rdquo;</strong>.</li>
+                </ol>
+                <p><strong>Tip:</strong> &ldquo;While Using the App&rdquo; is recommended for the best balance of functionality and battery life.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Explore Screen -->
+          <div class="help-category">
+            <h2 class="help-category-title">Explore Screen</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>What You&rsquo;ll See</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <ul>
+                  <li><strong>Map and markers:</strong> Each marker represents a recommended location. The number on the marker is the location score.</li>
+                  <li><strong>Your search area:</strong> A circle around your location shows the area currently being searched.</li>
+                  <li><strong>Location badge:</strong> Your current search location appears at the top. Tap it to change location.</li>
+                  <li><strong>Centre button:</strong> Use the location button to jump back to your selected search area.</li>
+                  <li><strong>Results sheet:</strong> The panel at the bottom shows how many spots were found and lists them in order.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Map Layers</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute currently supports four map views:</p>
+                <ul>
+                  <li><strong>Map:</strong> A standard map view for roads, fields, and nearby features.</li>
+                  <li><strong>Satellite:</strong> Satellite imagery to help judge terrain, access, and land use.</li>
+                  <li><strong>Historic OS:</strong> Historic Ordnance Survey mapping to help reveal former buildings, routes, and features.</li>
+                  <li><strong>LiDAR:</strong> A terrain-focused layer that can reveal earthworks, subtle shapes, and landscape anomalies.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Understanding Scores -->
+          <div class="help-category">
+            <h2 class="help-category-title">Understanding Scores</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>How Scores Work</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Each recommendation has a score to help you compare locations quickly. In general:</p>
+                <ul>
+                  <li><strong>Higher scores</strong> suggest stronger combined evidence from the app&rsquo;s data sources.</li>
+                  <li><strong>Mid-range scores</strong> may still be worth checking, especially if they fit your interests or local knowledge.</li>
+                  <li><strong>Lower scores</strong> can still be usable, but the evidence is weaker or less complete.</li>
+                </ul>
+                <p>A score is only a guide. It does not guarantee finds.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Legal Status Badges</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Each spot also includes a legal status badge:</p>
+                <ul>
+                  <li><strong>Clear:</strong> No known legal restrictions were detected in the app&rsquo;s current coverage for that spot.</li>
+                  <li><strong>Caution:</strong> The location may be near a protected area or may need extra checking before you detect.</li>
+                  <li><strong>Restricted:</strong> The app has identified a likely restriction. This spot should be treated as off-limits unless you have the correct official consent.</li>
+                  <li><strong>Coming Soon:</strong> Legal coverage for that area is not yet complete. Always make your own checks before detecting.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Recommendation Details -->
+          <div class="help-category">
+            <h2 class="help-category-title">Recommendation Details</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>What&rsquo;s Included in a Recommendation</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Open any recommendation to see the full breakdown:</p>
+                <ul>
+                  <li><strong>Score and summary:</strong> A quick explanation of why the spot was recommended.</li>
+                  <li><strong>Distance and direction:</strong> Shows how far the location is from your selected search point.</li>
+                  <li><strong>LiDAR hillshade image:</strong> Where available, this gives you a close-up view of the terrain clue that contributed to the recommendation.</li>
+                  <li><strong>Interactive map:</strong> Switch between Map, Satellite, Historic OS, and LiDAR to inspect the area from different angles.</li>
+                  <li><strong>Scoring breakdown:</strong> RelicRoute currently breaks the score into PAS Finds, LiDAR, Historic Maps, Soil, and Accessibility. Each factor includes a score and a short explanation.</li>
+                  <li><strong>Nearby Finds:</strong> Where available, you&rsquo;ll see nearby Portable Antiquities Scheme finds, including thumbnails and links to the original records.</li>
+                  <li><strong>Legal detail:</strong> If a nearby restriction has been identified, the app may show the type of restriction plus distance and direction.</li>
+                  <li><strong>Grid reference:</strong> Each recommendation includes its grid reference for easy reference.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>&ldquo;Why This Spot?&rdquo;</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Signed-in users can request an AI-generated explanation for a recommendation. This gives a plain-English summary of why the location may be worth checking based on the data behind it.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Saved Locations -->
+          <div class="help-category">
+            <h2 class="help-category-title">Saved Locations</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Managing Your Saved Spots</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>The Saved tab is your shortlist.</p>
+                <ul>
+                  <li><strong>Save a location:</strong> Tap the star on a recommendation detail page.</li>
+                  <li><strong>Open a saved location:</strong> Saved spots keep their score, summary, legal status, map, and supporting detail.</li>
+                  <li><strong>Remove a saved location:</strong> You can remove saved items from the list or from the saved detail page.</li>
+                </ul>
+                <p>If you are not signed in, you&rsquo;ll be prompted to sign in before you can save or view saved locations.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Profile and Preferences -->
+          <div class="help-category">
+            <h2 class="help-category-title">Profile &amp; Preferences</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Location &amp; Preferred Eras</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>The Profile tab lets you manage your account and search preferences.</p>
+                <p><strong>Location:</strong> Your current search location is shown here. Tap &ldquo;Change location&rdquo; to update it.</p>
+                <p><strong>Preferred Eras:</strong> You can filter results by historical era. The current build supports:</p>
+                <ul>
+                  <li>Prehistoric</li>
+                  <li>Roman</li>
+                  <li>Early Medieval</li>
+                  <li>Medieval</li>
+                  <li>Post Medieval</li>
+                  <li>Modern</li>
+                </ul>
+                <p>If no eras are selected, RelicRoute treats that as searching across all eras.</p>
+                <p><strong>Avoid Protected Areas:</strong> Turn this on to filter out locations associated with protected areas such as scheduled monuments and SSSIs.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Accounts -->
+          <div class="help-category">
+            <h2 class="help-category-title">Accounts</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Sign Up &amp; Sign In</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p><strong>Sign up:</strong> Create an account using your email address and password, or use <strong>Sign in with Apple</strong>. You&rsquo;ll verify your account using the code sent to your email.</p>
+                <p><strong>Sign in</strong> to:</p>
+                <ul>
+                  <li>Save locations</li>
+                  <li>Access AI explanations</li>
+                  <li>Sync your account activity more reliably across sessions</li>
+                </ul>
+                <p><strong>Forgot password:</strong> Use &ldquo;Forgot password&rdquo; on the sign-in screen to request a reset code by email.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Subscription -->
+          <div class="help-category">
+            <h2 class="help-category-title">Subscription &amp; Limits</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Free Tier &amp; Premium</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute includes a free tier. In the current build, the free tier shows <strong>3 recommendations per day</strong>. When you hit the daily limit, the app shows the upgrade screen.</p>
+                <p><strong>Premium</strong> includes:</p>
+                <ul>
+                  <li>Unlimited recommendations per day</li>
+                  <li>AI-powered explanations for every spot</li>
+                  <li>Advanced preferences and filters</li>
+                  <li>Priority support</li>
+                </ul>
+                <p>Your subscription is managed through your Apple ID. To cancel or change, go to <strong>Settings &gt; [Your Name] &gt; Subscriptions</strong>.</p>
+                <p>If a previous purchase is not showing, use <strong>&ldquo;Restore previous purchase&rdquo;</strong> from the upgrade screen.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="help-category">
+            <h2 class="help-category-title">Troubleshooting</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Common Issues</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p><strong>&ldquo;Could not find that postcode&rdquo;</strong><br>Check the spelling and spacing, then try again. Use a full postcode where possible.</p>
+                <p><strong>GPS is not working</strong><br>Make sure location permission is enabled for the app in <strong>Settings &gt; Privacy &amp; Security &gt; Location Services &gt; RelicRoute</strong>. If GPS still fails, use postcode search instead.</p>
+                <p><strong>&ldquo;Session expired&rdquo;</strong><br>Sign in again. This usually means your session token needs refreshing.</p>
+                <p><strong>No spots found</strong><br>Try one of these:</p>
+                <ul>
+                  <li>Move your search location slightly</li>
+                  <li>Search a nearby postcode</li>
+                  <li>Turn off restrictive filters</li>
+                  <li>Check back later as coverage grows</li>
+                </ul>
+                <p><strong>Saved locations are empty</strong><br>You need to be signed in to save and view saved locations.</p>
+                <p><strong>Images or map layers do not load</strong><br>This is usually a temporary network or coverage issue. Try again on a stronger connection.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Safety and Legal -->
+          <div class="help-category">
+            <h2 class="help-category-title">Safety &amp; Legal</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Permission Comes First</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute does not grant permission to detect anywhere. You must get permission from the landowner or land manager before using a metal detector. Public access does not automatically mean metal detecting is allowed.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Scheduled Monuments</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Scheduled monuments are legally protected. In both England and Wales, metal detecting on a scheduled monument requires official consent, and unauthorised detecting on these sites can be a criminal offence.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>SSSIs &amp; Sensitive Land</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Some protected sites, including Sites of Special Scientific Interest, may require consent for activities that could damage them. If a location is near a sensitive site, always check the local restrictions before detecting.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>National Parks &amp; Protected Landscapes</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Being inside a national park or protected landscape does not remove the need for permission. Some authorities or land managers may refuse metal detecting on land they own or manage.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Treasure Reporting</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>If you think you may have found treasure, act quickly. Current GOV.UK guidance says treasure must be reported within 14 days, and the public-facing reporting route is through your local Finds Liaison Officer.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Responsible Detecting</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute encourages all users to follow the Code of Practice for Responsible Metal Detecting in England and Wales and to record significant finds with the Portable Antiquities Scheme.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- FAQ -->
+          <div class="help-category">
+            <h2 class="help-category-title">FAQ</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Does RelicRoute guarantee finds?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>No. RelicRoute highlights promising locations based on available data, but no app can guarantee what is in the ground.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Does a green or clear badge mean I can detect there?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>No. It only means the app has not identified a restriction in its current coverage. You still need permission and your own checks.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Why do some areas show limited legal coverage?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Coverage varies by dataset and region. Where legal coverage is incomplete, the app shows cautionary wording instead of making assumptions.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Why do I need an account?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>An account is needed for features like saved locations and AI explanations.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Why would I use Historic OS or LiDAR instead of the normal map?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Historic OS helps reveal former human activity. LiDAR helps reveal subtle terrain shapes and earthworks that may not be obvious on modern maps or satellite imagery.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>What should I do if I find something important?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Stop, record the location carefully, handle the item responsibly, and follow the proper reporting route where required.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Android Content -->
+        <div class="platform-content" id="android-content" role="tabpanel" aria-labelledby="android-tab" hidden>
+
+          <!-- Welcome -->
+          <div class="help-intro">
+            <p>The app is designed to help you:</p>
+            <ul>
+              <li>Discover promising spots near your chosen location</li>
+              <li>Compare areas using different map layers</li>
+              <li>Understand why a spot has been recommended</li>
+              <li>Save places you want to revisit</li>
+              <li>Avoid obvious protected or restricted areas</li>
+            </ul>
+            <p>RelicRoute is a planning tool. It helps you narrow down where to look next, but it does not replace landowner permission, local checks, or responsible detecting.</p>
+          </div>
+
+          <!-- Getting Started -->
+          <div class="help-category">
+            <h2 class="help-category-title">Getting Started</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Installing RelicRoute on Android</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <ol>
+                  <li>Open the <strong>Google Play Store</strong> on your Android device.</li>
+                  <li>Tap the search bar and type <strong>&ldquo;RelicRoute&rdquo;</strong>.</li>
+                  <li>Tap <strong>Install</strong> next to the RelicRoute app (look for our green and bronze logo).</li>
+                  <li>Wait for the download and installation to complete.</li>
+                  <li>Tap <strong>Open</strong> to launch the app.</li>
+                </ol>
+                <p><strong>Requirements:</strong> Android 10 (API 29) or later. Requires Google Play Services.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Quick Start</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <ol>
+                  <li><strong>Set your location</strong> &mdash; When you first open RelicRoute, choose how you want to search:
+                    <ul>
+                      <li><strong>Enter a postcode:</strong> Type in a UK postcode and tap Search.</li>
+                      <li><strong>Use GPS:</strong> Tap &ldquo;Use my GPS location&rdquo; to search around your current position.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Review the map</strong> &mdash; On the Explore screen, RelicRoute searches within roughly 5&nbsp;km of your selected location and places markers on the map for recommended spots.</li>
+                  <li><strong>Open a spot</strong> &mdash; Tap a marker to see a quick preview, then tap &ldquo;View details&rdquo; to open the full recommendation.</li>
+                  <li><strong>Save the best ones</strong> &mdash; If you are signed in, tap the star on a recommendation to save it for later.</li>
+                </ol>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Enabling Location Services</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute needs location access to show nearby detecting spots and provide accurate recommendations.</p>
+                <ol>
+                  <li>When prompted, tap <strong>&ldquo;While using the app&rdquo;</strong> or <strong>&ldquo;Only this time&rdquo;</strong>.</li>
+                  <li>If you previously denied access, go to <strong>Settings &gt; Apps &gt; RelicRoute &gt; Permissions &gt; Location</strong> and select <strong>&ldquo;Allow only while using the app&rdquo;</strong>.</li>
+                </ol>
+                <p><strong>Tip:</strong> On Android 12+, you can also grant &ldquo;Approximate location&rdquo; only, but &ldquo;Precise location&rdquo; is recommended for the best experience.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Explore Screen -->
+          <div class="help-category">
+            <h2 class="help-category-title">Explore Screen</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>What You&rsquo;ll See</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <ul>
+                  <li><strong>Map and markers:</strong> Each marker represents a recommended location. The number on the marker is the location score.</li>
+                  <li><strong>Your search area:</strong> A circle around your location shows the area currently being searched.</li>
+                  <li><strong>Location badge:</strong> Your current search location appears at the top. Tap it to change location.</li>
+                  <li><strong>Centre button:</strong> Use the location button to jump back to your selected search area.</li>
+                  <li><strong>Results sheet:</strong> The panel at the bottom shows how many spots were found and lists them in order.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Map Layers</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute currently supports four map views:</p>
+                <ul>
+                  <li><strong>Map:</strong> A standard map view for roads, fields, and nearby features.</li>
+                  <li><strong>Satellite:</strong> Satellite imagery to help judge terrain, access, and land use.</li>
+                  <li><strong>Historic OS:</strong> Historic Ordnance Survey mapping to help reveal former buildings, routes, and features.</li>
+                  <li><strong>LiDAR:</strong> A terrain-focused layer that can reveal earthworks, subtle shapes, and landscape anomalies.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Understanding Scores -->
+          <div class="help-category">
+            <h2 class="help-category-title">Understanding Scores</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>How Scores Work</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Each recommendation has a score to help you compare locations quickly. In general:</p>
+                <ul>
+                  <li><strong>Higher scores</strong> suggest stronger combined evidence from the app&rsquo;s data sources.</li>
+                  <li><strong>Mid-range scores</strong> may still be worth checking, especially if they fit your interests or local knowledge.</li>
+                  <li><strong>Lower scores</strong> can still be usable, but the evidence is weaker or less complete.</li>
+                </ul>
+                <p>A score is only a guide. It does not guarantee finds.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Legal Status Badges</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Each spot also includes a legal status badge:</p>
+                <ul>
+                  <li><strong>Clear:</strong> No known legal restrictions were detected in the app&rsquo;s current coverage for that spot.</li>
+                  <li><strong>Caution:</strong> The location may be near a protected area or may need extra checking before you detect.</li>
+                  <li><strong>Restricted:</strong> The app has identified a likely restriction. This spot should be treated as off-limits unless you have the correct official consent.</li>
+                  <li><strong>Coming Soon:</strong> Legal coverage for that area is not yet complete. Always make your own checks before detecting.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Recommendation Details -->
+          <div class="help-category">
+            <h2 class="help-category-title">Recommendation Details</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>What&rsquo;s Included in a Recommendation</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Open any recommendation to see the full breakdown:</p>
+                <ul>
+                  <li><strong>Score and summary:</strong> A quick explanation of why the spot was recommended.</li>
+                  <li><strong>Distance and direction:</strong> Shows how far the location is from your selected search point.</li>
+                  <li><strong>LiDAR hillshade image:</strong> Where available, this gives you a close-up view of the terrain clue that contributed to the recommendation.</li>
+                  <li><strong>Interactive map:</strong> Switch between Map, Satellite, Historic OS, and LiDAR to inspect the area from different angles.</li>
+                  <li><strong>Scoring breakdown:</strong> RelicRoute currently breaks the score into PAS Finds, LiDAR, Historic Maps, Soil, and Accessibility. Each factor includes a score and a short explanation.</li>
+                  <li><strong>Nearby Finds:</strong> Where available, you&rsquo;ll see nearby Portable Antiquities Scheme finds, including thumbnails and links to the original records.</li>
+                  <li><strong>Legal detail:</strong> If a nearby restriction has been identified, the app may show the type of restriction plus distance and direction.</li>
+                  <li><strong>Grid reference:</strong> Each recommendation includes its grid reference for easy reference.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>&ldquo;Why This Spot?&rdquo;</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Signed-in users can request an AI-generated explanation for a recommendation. This gives a plain-English summary of why the location may be worth checking based on the data behind it.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Saved Locations -->
+          <div class="help-category">
+            <h2 class="help-category-title">Saved Locations</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Managing Your Saved Spots</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>The Saved tab is your shortlist.</p>
+                <ul>
+                  <li><strong>Save a location:</strong> Tap the star on a recommendation detail page.</li>
+                  <li><strong>Open a saved location:</strong> Saved spots keep their score, summary, legal status, map, and supporting detail.</li>
+                  <li><strong>Remove a saved location:</strong> You can remove saved items from the list or from the saved detail page.</li>
+                </ul>
+                <p>If you are not signed in, you&rsquo;ll be prompted to sign in before you can save or view saved locations.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Profile and Preferences -->
+          <div class="help-category">
+            <h2 class="help-category-title">Profile &amp; Preferences</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Location &amp; Preferred Eras</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>The Profile tab lets you manage your account and search preferences.</p>
+                <p><strong>Location:</strong> Your current search location is shown here. Tap &ldquo;Change location&rdquo; to update it.</p>
+                <p><strong>Preferred Eras:</strong> You can filter results by historical era. The current build supports:</p>
+                <ul>
+                  <li>Prehistoric</li>
+                  <li>Roman</li>
+                  <li>Early Medieval</li>
+                  <li>Medieval</li>
+                  <li>Post Medieval</li>
+                  <li>Modern</li>
+                </ul>
+                <p>If no eras are selected, RelicRoute treats that as searching across all eras.</p>
+                <p><strong>Avoid Protected Areas:</strong> Turn this on to filter out locations associated with protected areas such as scheduled monuments and SSSIs.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Accounts -->
+          <div class="help-category">
+            <h2 class="help-category-title">Accounts</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Sign Up &amp; Sign In</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p><strong>Sign up:</strong> Create an account using your email address and password, or use <strong>Sign in with Google</strong>. You&rsquo;ll verify your account using the code sent to your email.</p>
+                <p><strong>Sign in</strong> to:</p>
+                <ul>
+                  <li>Save locations</li>
+                  <li>Access AI explanations</li>
+                  <li>Sync your account activity more reliably across sessions</li>
+                </ul>
+                <p><strong>Forgot password:</strong> Use &ldquo;Forgot password&rdquo; on the sign-in screen to request a reset code by email.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Subscription -->
+          <div class="help-category">
+            <h2 class="help-category-title">Subscription &amp; Limits</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Free Tier &amp; Premium</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute includes a free tier. In the current build, the free tier shows <strong>3 recommendations per day</strong>. When you hit the daily limit, the app shows the upgrade screen.</p>
+                <p><strong>Premium</strong> includes:</p>
+                <ul>
+                  <li>Unlimited recommendations per day</li>
+                  <li>AI-powered explanations for every spot</li>
+                  <li>Advanced preferences and filters</li>
+                  <li>Priority support</li>
+                </ul>
+                <p>Your subscription is managed through Google Play. To cancel or change, go to <strong>Google Play Store &gt; Menu &gt; Subscriptions</strong>.</p>
+                <p>If a previous purchase is not showing, use <strong>&ldquo;Restore previous purchase&rdquo;</strong> from the upgrade screen.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="help-category">
+            <h2 class="help-category-title">Troubleshooting</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Common Issues</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p><strong>&ldquo;Could not find that postcode&rdquo;</strong><br>Check the spelling and spacing, then try again. Use a full postcode where possible.</p>
+                <p><strong>GPS is not working</strong><br>Make sure location permission is enabled for the app in <strong>Settings &gt; Apps &gt; RelicRoute &gt; Permissions &gt; Location</strong>. If GPS still fails, use postcode search instead.</p>
+                <p><strong>&ldquo;Session expired&rdquo;</strong><br>Sign in again. This usually means your session token needs refreshing.</p>
+                <p><strong>No spots found</strong><br>Try one of these:</p>
+                <ul>
+                  <li>Move your search location slightly</li>
+                  <li>Search a nearby postcode</li>
+                  <li>Turn off restrictive filters</li>
+                  <li>Check back later as coverage grows</li>
+                </ul>
+                <p><strong>Saved locations are empty</strong><br>You need to be signed in to save and view saved locations.</p>
+                <p><strong>Images or map layers do not load</strong><br>This is usually a temporary network or coverage issue. Try again on a stronger connection.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Safety and Legal -->
+          <div class="help-category">
+            <h2 class="help-category-title">Safety &amp; Legal</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Permission Comes First</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute does not grant permission to detect anywhere. You must get permission from the landowner or land manager before using a metal detector. Public access does not automatically mean metal detecting is allowed.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Scheduled Monuments</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Scheduled monuments are legally protected. In both England and Wales, metal detecting on a scheduled monument requires official consent, and unauthorised detecting on these sites can be a criminal offence.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>SSSIs &amp; Sensitive Land</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Some protected sites, including Sites of Special Scientific Interest, may require consent for activities that could damage them. If a location is near a sensitive site, always check the local restrictions before detecting.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>National Parks &amp; Protected Landscapes</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Being inside a national park or protected landscape does not remove the need for permission. Some authorities or land managers may refuse metal detecting on land they own or manage.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Treasure Reporting</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>If you think you may have found treasure, act quickly. Current GOV.UK guidance says treasure must be reported within 14 days, and the public-facing reporting route is through your local Finds Liaison Officer.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Responsible Detecting</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>RelicRoute encourages all users to follow the Code of Practice for Responsible Metal Detecting in England and Wales and to record significant finds with the Portable Antiquities Scheme.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- FAQ -->
+          <div class="help-category">
+            <h2 class="help-category-title">FAQ</h2>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Does RelicRoute guarantee finds?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>No. RelicRoute highlights promising locations based on available data, but no app can guarantee what is in the ground.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Does a green or clear badge mean I can detect there?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>No. It only means the app has not identified a restriction in its current coverage. You still need permission and your own checks.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Why do some areas show limited legal coverage?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Coverage varies by dataset and region. Where legal coverage is incomplete, the app shows cautionary wording instead of making assumptions.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Why do I need an account?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>An account is needed for features like saved locations and AI explanations.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>Why would I use Historic OS or LiDAR instead of the normal map?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Historic OS helps reveal former human activity. LiDAR helps reveal subtle terrain shapes and earthworks that may not be obvious on modern maps or satellite imagery.</p>
+              </div>
+            </article>
+
+            <article class="help-article">
+              <button class="help-article-toggle" aria-expanded="false">
+                <h3>What should I do if I find something important?</h3>
+                <svg class="help-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+              </button>
+              <div class="help-article-body">
+                <p>Stop, record the location carefully, handle the item responsibly, and follow the proper reporting route where required.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Still need help -->
+        <div class="help-cta">
+          <h2>Still Need Help?</h2>
+          <p>Can&rsquo;t find what you&rsquo;re looking for? Get in touch with our support team.</p>
+          <div class="help-cta-actions">
+            <a href="contact.html" class="btn btn-bronze">Contact Support</a>
+            <a href="mailto:support@relicroute.co.uk" class="btn btn-outline">Email support@relicroute.co.uk</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="relicroute-logo.png" alt="RelicRoute" class="footer-logo" width="160">
+        <p class="footer-tagline">AI-powered detecting spot recommendations for the UK.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help Guides</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 RelicRoute. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
