@@ -1,0 +1,19 @@
+# RelicRoute - https://www.relicroute.co.uk
+# Last updated: 2026-03-11
+
+User-agent: *
+Allow: /
+Sitemap: https://www.relicroute.co.uk/sitemap.xml
+
+# AI search bots - explicitly allowed for search visibility
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
