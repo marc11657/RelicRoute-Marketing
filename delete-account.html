@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact RelicRoute — Get in touch with our support team for help with the app, partnership enquiries, or general questions.">
+  <meta name="description" content="Request deletion of your RelicRoute account and associated data. Submit your request and we'll process it within 30 days.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="RelicRoute">
   <meta name="google-site-verification" content="62xCfvaOAFISEsQDNZ6DNPzke8ZOVSslEIPbZOKiRK8">
-  <title>Contact Us — RelicRoute</title>
+  <title>Delete Account — RelicRoute</title>
 
-  <link rel="canonical" href="https://www.relicroute.co.uk/contact.html">
+  <link rel="canonical" href="https://www.relicroute.co.uk/delete-account.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Contact RelicRoute">
-  <meta property="og:description" content="Get in touch with our support team for help, partnerships, or general questions.">
+  <meta property="og:title" content="Delete Account — RelicRoute">
+  <meta property="og:description" content="Request deletion of your RelicRoute account and associated data.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.relicroute.co.uk/contact.html">
+  <meta property="og:url" content="https://www.relicroute.co.uk/delete-account.html">
   <meta property="og:image" content="https://www.relicroute.co.uk/relicroute-logo.png">
   <meta property="og:site_name" content="RelicRoute">
   <meta property="og:locale" content="en_GB">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Contact RelicRoute">
-  <meta name="twitter:description" content="Get in touch with our support team for help, partnerships, or general questions.">
+  <meta name="twitter:title" content="Delete Account — RelicRoute">
+  <meta name="twitter:description" content="Request deletion of your RelicRoute account and associated data.">
   <meta name="twitter:image" content="https://www.relicroute.co.uk/relicroute-logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,72 +59,82 @@
 
   <main>
 
-    <!-- Contact Hero -->
+    <!-- Delete Account Hero -->
     <section class="page-hero">
       <div class="contour-bg" aria-hidden="true"></div>
       <div class="container page-hero-content">
-        <h1 class="page-hero-headline">Get in Touch</h1>
-        <p class="page-hero-sub">Have a question, suggestion, or need help with RelicRoute? We&rsquo;d love to hear from you.</p>
+        <h1 class="page-hero-headline">Delete Your Account</h1>
+        <p class="page-hero-sub">Request the deletion of your RelicRoute account and all associated personal data.</p>
       </div>
     </section>
 
-    <!-- Contact Options -->
+    <!-- Delete Account Form -->
     <section class="contact-section">
       <div class="container">
         <div class="contact-grid">
 
-          <!-- Contact Form -->
+          <!-- Form -->
           <div class="contact-form-wrapper">
-            <h2 class="contact-heading">Send Us a Message</h2>
-            <form class="contact-form" id="contact-form" action="https://formsubmit.co/support@relicroute.co.uk" method="POST">
-              <input type="hidden" name="_subject" value="New message from RelicRoute website">
+            <h2 class="contact-heading">Account Deletion Request</h2>
+            <p style="color: var(--parchment); opacity: 0.85; margin-bottom: 2rem; line-height: 1.7;">
+              To request the deletion of your RelicRoute account and personal data, please complete the form below.
+              Once submitted, we will verify your identity and process your request within <strong>30 days</strong>.
+            </p>
+
+            <form class="contact-form" id="delete-account-form" action="https://formsubmit.co/data-request@relicroute.co.uk" method="POST">
+              <input type="hidden" name="_subject" value="Account Deletion Request">
               <input type="hidden" name="_captcha" value="true">
               <input type="hidden" name="_next" value="">
               <input type="text" name="_honey" style="display:none" aria-hidden="true">
 
               <div class="form-group">
-                <label for="name">Your Name</label>
+                <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required placeholder="e.g. John Smith" autocomplete="name">
               </div>
 
               <div class="form-group">
-                <label for="email">Your Email</label>
+                <label for="email">Email Address (associated with your account)</label>
                 <input type="email" id="email" name="email" required placeholder="e.g. john@example.com" autocomplete="email">
               </div>
 
               <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject" required>
-                  <option value="" disabled selected>Select a topic</option>
-                  <option value="General Enquiry">General Enquiry</option>
-                  <option value="App Support">App Support</option>
-                  <option value="Bug Report">Bug Report</option>
-                  <option value="Feature Request">Feature Request</option>
-                  <option value="Partnership">Partnership / Business</option>
+                <label for="reason">Reason for Deletion (optional)</label>
+                <select id="reason" name="reason">
+                  <option value="" disabled selected>Select a reason</option>
+                  <option value="No longer using the app">No longer using the app</option>
+                  <option value="Privacy concerns">Privacy concerns</option>
+                  <option value="Too many notifications">Too many notifications</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required rows="6" placeholder="Tell us how we can help..."></textarea>
+                <label for="comments">Additional Comments (optional)</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any additional details you'd like to share..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-bronze btn-lg contact-submit">Send Message</button>
+              <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <input type="checkbox" id="confirm" name="confirm" required style="margin-top: 0.3rem; accent-color: var(--brand-bronze); width: 18px; height: 18px; flex-shrink: 0;">
+                <label for="confirm" style="font-size: 0.95rem; line-height: 1.6; cursor: pointer;">
+                  I understand that this action is <strong>permanent and irreversible</strong>. Once processed, my account and all associated data will be permanently deleted and cannot be recovered.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-bronze btn-lg contact-submit">Submit Deletion Request</button>
             </form>
           </div>
 
-          <!-- Contact Info Sidebar -->
+          <!-- Info Sidebar -->
           <aside class="contact-info">
             <div class="contact-info-card">
               <div class="contact-info-icon">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C9965C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="6" width="26" height="20" rx="3"/>
-                  <path d="M3 9l13 8 13-8"/>
+                  <path d="M4 7h24M10 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2M26 7l-1.5 18.5a2 2 0 0 1-2 1.5H9.5a2 2 0 0 1-2-1.5L6 7"/>
+                  <path d="M13 12v10M19 12v10"/>
                 </svg>
               </div>
-              <h3>Email Us Directly</h3>
-              <p>Prefer to email? Reach our support team at:</p>
-              <a href="mailto:support@relicroute.co.uk" class="contact-email-link">support@relicroute.co.uk</a>
+              <h3>What Gets Deleted</h3>
+              <p>Your account profile, saved locations, search history, preferences, and all other personal data associated with your account will be permanently removed.</p>
             </div>
 
             <div class="contact-info-card">
@@ -134,19 +144,19 @@
                   <path d="M16 10v6l4 2"/>
                 </svg>
               </div>
-              <h3>Response Time</h3>
-              <p>We aim to respond to all enquiries within <strong>24 hours</strong> during business days.</p>
+              <h3>Processing Time</h3>
+              <p>Deletion requests are processed within <strong>30 days</strong>. You will receive an email confirmation once your data has been removed.</p>
             </div>
 
             <div class="contact-info-card">
               <div class="contact-info-icon">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C9965C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 20l-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H12z"/>
-                  <path d="M12 12h8M12 16h5"/>
+                  <rect x="3" y="6" width="26" height="20" rx="3"/>
+                  <path d="M3 9l13 8 13-8"/>
                 </svg>
               </div>
-              <h3>Help Guides</h3>
-              <p>Looking for app instructions? Check our <a href="help.html">Help Guides</a> for step-by-step tutorials.</p>
+              <h3>Need Help Instead?</h3>
+              <p>If you're having issues with the app, our support team may be able to help before you delete your account. <a href="contact.html">Contact us</a> or check our <a href="help.html">Help Guides</a>.</p>
             </div>
           </aside>
 
