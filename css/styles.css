@@ -373,6 +373,19 @@ ul {
   color: var(--charcoal-earth);
 }
 
+.phone-screenshot {
+  width: 100%;
+  aspect-ratio: 9 / 19;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 2px solid rgba(201, 150, 92, 0.25);
+  display: block;
+}
+
+.phone-screenshot--light {
+  border-color: rgba(43, 36, 29, 0.12);
+}
+
 /* ===================================================
    PROBLEM / SOLUTION
    =================================================== */
@@ -1254,6 +1267,10 @@ ul {
   .screenshot-placeholder {
     border-radius: 16px;
     padding: 12px;
+  }
+
+  .phone-screenshot {
+    border-radius: 16px;
   }
 
   .screenshot-placeholder span {
