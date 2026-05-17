@@ -86,7 +86,7 @@
 
   if (!prefersReducedMotion) {
     const revealElements = document.querySelectorAll(
-      '.feature-card, .step, .problem-solution-body, .pricing-content, .hero-content, .preview-item, .beta-teaser-content'
+      '.feature-card, .step, .problem-solution-body, .pricing-content, .pricing-card, .hero-content, .preview-item, .beta-teaser-content'
     );
 
     revealElements.forEach(el => el.classList.add('reveal'));
@@ -105,4 +105,334 @@
 
     revealElements.forEach(el => observer.observe(el));
   }
+
+  // --- Searchable Select (Beta form device picker) ---
+  const deviceData = {
+    'Samsung': [
+      'Galaxy S25 Ultra', 'Galaxy S25+', 'Galaxy S25',
+      'Galaxy S24 Ultra', 'Galaxy S24+', 'Galaxy S24', 'Galaxy S24 FE',
+      'Galaxy S23 Ultra', 'Galaxy S23+', 'Galaxy S23', 'Galaxy S23 FE',
+      'Galaxy S22 Ultra', 'Galaxy S22+', 'Galaxy S22',
+      'Galaxy S21 Ultra', 'Galaxy S21+', 'Galaxy S21', 'Galaxy S21 FE',
+      'Galaxy Z Fold6', 'Galaxy Z Fold5', 'Galaxy Z Flip6', 'Galaxy Z Flip5',
+      'Galaxy A55', 'Galaxy A54', 'Galaxy A35', 'Galaxy A34', 'Galaxy A25', 'Galaxy A16', 'Galaxy A15', 'Galaxy A14',
+      'Other'
+    ],
+    'Google Pixel': [
+      'Pixel 9 Pro XL', 'Pixel 9 Pro', 'Pixel 9', 'Pixel 9a',
+      'Pixel 8 Pro', 'Pixel 8', 'Pixel 8a',
+      'Pixel 7 Pro', 'Pixel 7', 'Pixel 7a',
+      'Pixel 6 Pro', 'Pixel 6', 'Pixel 6a',
+      'Other'
+    ],
+    'OnePlus': [
+      'OnePlus 13', 'OnePlus 12', 'OnePlus 12R',
+      'OnePlus 11',
+      'OnePlus Nord 4', 'OnePlus Nord CE 4', 'OnePlus Nord 3',
+      'Other'
+    ],
+    'Xiaomi': [
+      'Xiaomi 14 Ultra', 'Xiaomi 14', 'Xiaomi 14T Pro', 'Xiaomi 14T',
+      'Xiaomi 13T Pro', 'Xiaomi 13T', 'Xiaomi 13',
+      'Redmi Note 13 Pro+', 'Redmi Note 13 Pro', 'Redmi Note 13',
+      'Redmi Note 12 Pro+', 'Redmi Note 12 Pro', 'Redmi Note 12',
+      'Redmi 13', 'Redmi 12',
+      'POCO F6 Pro', 'POCO F6', 'POCO X6 Pro',
+      'Other'
+    ],
+    'Motorola': [
+      'Edge 50 Ultra', 'Edge 50 Pro', 'Edge 50 Fusion',
+      'Edge 40 Pro', 'Edge 40',
+      'Moto G84', 'Moto G54', 'Moto G34', 'Moto G24',
+      'Razr 50 Ultra', 'Razr 50',
+      'Other'
+    ],
+    'Honor': [
+      'Magic 6 Pro', 'Magic 5 Pro',
+      'Honor 200 Pro', 'Honor 200',
+      'Honor 90', 'Honor 70',
+      'Other'
+    ],
+    'Huawei': [
+      'P60 Pro', 'P50 Pro',
+      'Mate 60 Pro', 'Mate 50 Pro',
+      'Nova 12', 'Nova 11',
+      'Other'
+    ],
+    'Sony': [
+      'Xperia 1 VI', 'Xperia 1 V',
+      'Xperia 5 V',
+      'Xperia 10 VI', 'Xperia 10 V',
+      'Other'
+    ],
+    'Nokia (HMD)': [
+      'Nokia G42', 'Nokia G22', 'Nokia G21',
+      'Nokia X30', 'Nokia XR21',
+      'Other'
+    ],
+    'Oppo': [
+      'Find X7 Ultra', 'Find X7',
+      'Reno 12 Pro', 'Reno 12', 'Reno 11 Pro',
+      'A80', 'A60', 'A38',
+      'Other'
+    ],
+    'Realme': [
+      'GT 6', 'GT 5 Pro',
+      'Realme 12 Pro+', 'Realme 12 Pro', 'Realme 12',
+      'Realme C67', 'Realme C55',
+      'Other'
+    ],
+    'Nothing': [
+      'Phone (2a)', 'Phone (2)', 'Phone (1)',
+      'Other'
+    ]
+  };
+
+  const brandList = [...Object.keys(deviceData), 'Other'];
+
+  function initSearchableSelect(container, options, placeholder) {
+    const input = container.querySelector('.searchable-select-input');
+    const hidden = container.querySelector('input[type="hidden"]');
+    const dropdown = container.querySelector('.searchable-select-dropdown');
+    let highlighted = -1;
+    let currentOptions = options;
+    let isOpen = false;
+
+    function render(filter) {
+      const query = (filter || '').toLowerCase();
+      const filtered = currentOptions.filter(opt => opt.toLowerCase().includes(query));
+      dropdown.innerHTML = '';
+      highlighted = -1;
+
+      if (filtered.length === 0) {
+        const li = document.createElement('li');
+        li.className = 'searchable-select-no-results';
+        li.textContent = 'No matches found';
+        dropdown.appendChild(li);
+        return;
+      }
+
+      filtered.forEach((opt, i) => {
+        const li = document.createElement('li');
+        li.className = 'searchable-select-option';
+        li.setAttribute('role', 'option');
+        li.textContent = opt;
+        li.addEventListener('mousedown', (e) => {
+          e.preventDefault();
+          select(opt);
+        });
+        li.addEventListener('mouseenter', () => {
+          setHighlight(i);
+        });
+        dropdown.appendChild(li);
+      });
+    }
+
+    function open() {
+      if (input.disabled) return;
+      isOpen = true;
+      dropdown.classList.add('is-open');
+      input.setAttribute('aria-expanded', 'true');
+      render(input.value === hidden.value ? '' : input.value);
+    }
+
+    function close() {
+      isOpen = false;
+      dropdown.classList.remove('is-open');
+      input.setAttribute('aria-expanded', 'false');
+      highlighted = -1;
+      // Restore display value if user didn't pick a new option
+      if (hidden.value && input.value !== hidden.value) {
+        input.value = hidden.value;
+      }
+    }
+
+    function select(value) {
+      hidden.value = value;
+      input.value = value;
+      close();
+      input.dispatchEvent(new Event('ss:change'));
+    }
+
+    function setHighlight(index) {
+      const items = dropdown.querySelectorAll('.searchable-select-option');
+      items.forEach(li => li.classList.remove('is-highlighted'));
+      if (index >= 0 && index < items.length) {
+        highlighted = index;
+        items[index].classList.add('is-highlighted');
+        items[index].scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    input.addEventListener('focus', open);
+    input.addEventListener('click', () => { if (!isOpen) open(); });
+
+    input.addEventListener('input', () => {
+      hidden.value = '';
+      if (!isOpen) open();
+      render(input.value);
+    });
+
+    input.addEventListener('keydown', (e) => {
+      const items = dropdown.querySelectorAll('.searchable-select-option');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!isOpen) { open(); return; }
+        setHighlight(Math.min(highlighted + 1, items.length - 1));
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        setHighlight(Math.max(highlighted - 1, 0));
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (highlighted >= 0 && items[highlighted]) {
+          select(items[highlighted].textContent);
+        }
+      } else if (e.key === 'Escape') {
+        close();
+        input.blur();
+      }
+    });
+
+    input.addEventListener('blur', () => {
+      // Small delay so mousedown on option fires first
+      setTimeout(close, 150);
+    });
+
+    return {
+      setOptions(newOptions, newPlaceholder) {
+        currentOptions = newOptions;
+        hidden.value = '';
+        input.value = '';
+        input.placeholder = newPlaceholder || placeholder;
+        render('');
+      },
+      enable() {
+        input.disabled = false;
+        input.classList.remove('is-disabled');
+      },
+      disable() {
+        input.disabled = true;
+        input.classList.add('is-disabled');
+        hidden.value = '';
+        input.value = '';
+      },
+      reset() {
+        hidden.value = '';
+        input.value = '';
+        input.placeholder = placeholder;
+      }
+    };
+  }
+
+  // Wire up beta form selects if present
+  const brandContainer = document.getElementById('brand-select');
+  const modelContainer = document.getElementById('model-select');
+
+  if (brandContainer && modelContainer) {
+    const modelSelect = initSearchableSelect(modelContainer, [], 'Select a brand first...');
+    const brandSelect = initSearchableSelect(brandContainer, brandList, 'Search or select brand...');
+
+    const brandInput = brandContainer.querySelector('.searchable-select-input');
+    brandInput.addEventListener('ss:change', () => {
+      const brand = brandContainer.querySelector('input[type="hidden"]').value;
+      if (brand === 'Other') {
+        // Convert model to free-text
+        const modelInput = modelContainer.querySelector('.searchable-select-input');
+        const modelDropdown = modelContainer.querySelector('.searchable-select-dropdown');
+        modelSelect.enable();
+        modelSelect.setOptions([], 'Type your phone model...');
+        modelInput.value = '';
+        modelContainer.querySelector('input[type="hidden"]').value = '';
+        // Allow free-text entry: sync visible input to hidden
+        modelInput.removeEventListener('input', modelFreeText);
+        modelInput.addEventListener('input', modelFreeText);
+        modelDropdown.classList.remove('is-open');
+      } else if (deviceData[brand]) {
+        modelSelect.enable();
+        modelSelect.setOptions(deviceData[brand], 'Search or select model...');
+        // Remove free-text handler if it was set
+        const modelInput = modelContainer.querySelector('.searchable-select-input');
+        modelInput.removeEventListener('input', modelFreeText);
+      } else {
+        modelSelect.disable();
+      }
+    });
+
+    function modelFreeText() {
+      const modelInput = modelContainer.querySelector('.searchable-select-input');
+      modelContainer.querySelector('input[type="hidden"]').value = modelInput.value;
+    }
+
+    // Handle form reset (after successful submission)
+    const betaForm = document.getElementById('beta-signup-form');
+    if (betaForm) {
+      betaForm.addEventListener('reset', () => {
+        setTimeout(() => {
+          brandSelect.reset();
+          modelSelect.disable();
+          modelContainer.querySelector('.searchable-select-input').placeholder = 'Select a brand first...';
+        }, 0);
+      });
+    }
+  }
+
+  // --- AJAX Form Submission (Web3Forms) ---
+  document.querySelectorAll('.contact-form').forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('.contact-submit');
+      const statusEl = form.querySelector('.form-status');
+      const originalText = submitBtn.textContent;
+
+      const ajaxUrl = form.getAttribute('action');
+
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+
+      submitBtn.classList.add('is-loading');
+      submitBtn.textContent = 'Sending\u2026';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+      try {
+        const response = await fetch(ajaxUrl, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' },
+          signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            statusEl.textContent = form.getAttribute('data-success-message')
+              || 'Thank you! Your submission has been received.';
+            statusEl.className = 'form-status is-success';
+            form.reset();
+          } else {
+            throw new Error(data.message || 'Submission failed. Please try again.');
+          }
+        } else {
+          throw new Error('Server error (' + response.status + '). Please try again or email us directly.');
+        }
+      } catch (err) {
+        clearTimeout(timeoutId);
+        const message = err.name === 'AbortError'
+          ? 'The request timed out. Please try again, or email us directly at support@relicroute.co.uk'
+          : (err.message || 'Something went wrong. Please try again or email us directly.');
+        statusEl.textContent = message;
+        statusEl.className = 'form-status is-error';
+      } finally {
+        submitBtn.classList.remove('is-loading');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  });
 })();
