@@ -135,7 +135,7 @@ ul {
 
 .btn-beta {
   background: transparent;
-  color: var(--brand-bronze);
+  color: var(--parchment);
   border-color: var(--brand-bronze);
   font-size: 0.9rem;
   padding: 14px 24px;
@@ -685,7 +685,6 @@ ul {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--parchment);
-  opacity: 0.9;
   margin-bottom: 40px;
 }
 
@@ -718,7 +717,7 @@ ul {
 .beta-highlight-text {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--parchment);
+  color: var(--brand-bronze);
 }
 
 /* ===================================================
