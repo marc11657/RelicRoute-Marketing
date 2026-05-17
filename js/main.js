@@ -86,7 +86,7 @@
 
   if (!prefersReducedMotion) {
     const revealElements = document.querySelectorAll(
-      '.feature-card, .step, .problem-solution-body, .pricing-content, .hero-content, .preview-item'
+      '.feature-card, .step, .problem-solution-body, .pricing-content, .hero-content, .preview-item, .beta-teaser-content'
     );
 
     revealElements.forEach(el => el.classList.add('reveal'));

@@ -133,6 +133,23 @@ ul {
   font-size: 1.1rem;
 }
 
+.btn-beta {
+  background: transparent;
+  color: var(--brand-bronze);
+  border-color: var(--brand-bronze);
+  font-size: 0.9rem;
+  padding: 14px 24px;
+}
+
+.btn-beta:hover {
+  background: var(--brand-bronze);
+  color: var(--relic-green);
+}
+
+.btn-beta svg {
+  flex-shrink: 0;
+}
+
 /* --- Contour Background Texture --- */
 .contour-bg {
   position: absolute;
@@ -630,6 +647,78 @@ ul {
 .pricing-ctas {
   display: flex;
   justify-content: center;
+}
+
+/* ===================================================
+   BETA TEASER (index.html)
+   =================================================== */
+.beta-teaser {
+  position: relative;
+  background: var(--relic-green);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.beta-teaser-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.beta-badge {
+  display: inline-block;
+  background: var(--brand-bronze);
+  color: var(--relic-green);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.beta-teaser-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--parchment);
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.beta-teaser-body strong {
+  color: var(--brand-bronze);
+}
+
+.beta-teaser-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.beta-highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--moss-green);
+  border: 1px solid rgba(201, 150, 92, 0.2);
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+.beta-highlight-icon {
+  flex-shrink: 0;
+}
+
+.beta-highlight-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--parchment);
 }
 
 /* ===================================================
@@ -1173,7 +1262,8 @@ ul {
   .features,
   .app-preview,
   .how-it-works,
-  .pricing {
+  .pricing,
+  .beta-teaser {
     padding: 120px 0;
   }
 
@@ -1242,7 +1332,8 @@ ul {
     align-items: center;
   }
 
-  .btn-store {
+  .btn-store,
+  .btn-beta {
     width: 100%;
     max-width: 300px;
   }
@@ -1280,6 +1371,18 @@ ul {
   .screenshot-placeholder svg {
     width: 32px;
     height: 32px;
+  }
+
+  .beta-teaser-highlights {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .beta-highlight {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
   }
 
   .section-heading {
