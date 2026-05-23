@@ -98,6 +98,19 @@
               </div>
 
               <div class="form-group">
+                <label for="detect-location">Where do you detect?</label>
+                <select id="detect-location" name="detect_location" required>
+                  <option value="" disabled selected>Select your region...</option>
+                  <option value="Wales">Wales</option>
+                  <option value="England">England</option>
+                  <option value="Scotland">Scotland</option>
+                  <option value="Northern Ireland">Northern Ireland</option>
+                  <option value="United States">United States</option>
+                  <option value="Rest of world">Rest of world</option>
+                </select>
+              </div>
+
+              <div class="form-group">
                 <label for="device-brand">Phone Brand</label>
                 <div class="searchable-select" id="brand-select">
                   <input type="text" class="searchable-select-input" id="device-brand" placeholder="Search or select brand..." autocomplete="off" aria-haspopup="listbox" aria-expanded="false">
@@ -178,6 +191,9 @@
       <div class="footer-brand">
         <img src="relicroute-logo.png" alt="RelicRoute" class="footer-logo" width="160">
         <p class="footer-tagline">AI-powered detecting spot recommendations for the UK.</p>
+        <a href="https://x.com/RelicRoute" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X" class="footer-social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="privacy.html">Privacy Policy</a>
