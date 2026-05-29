@@ -990,7 +990,22 @@ ul {
   font-size: 0.9rem;
   color: var(--parchment);
   opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--parchment);
+  opacity: 0.5;
+  transition: opacity 0.2s, color 0.2s;
   margin-bottom: 28px;
+}
+
+.footer-social-link:hover {
+  opacity: 1;
+  color: var(--brand-bronze);
 }
 
 .footer-links {
