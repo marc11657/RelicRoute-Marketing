@@ -123,6 +123,24 @@ ul {
   flex-shrink: 0;
 }
 
+/* Platform-aware store buttons — js/main.js adds .platform-ios / .platform-android to <html> */
+.platform-ios .btn-store[data-store="ios"],
+.platform-android .btn-store[data-store="android"] {
+  background: var(--brand-bronze);
+  color: var(--relic-green);
+}
+
+.platform-ios .btn-store[data-store="ios"]:hover,
+.platform-android .btn-store[data-store="android"]:hover {
+  background: var(--deep-bronze);
+  border-color: var(--deep-bronze);
+}
+
+.platform-ios .hero-ctas .btn-store[data-store="ios"],
+.platform-android .hero-ctas .btn-store[data-store="android"] {
+  order: -1;
+}
+
 .btn-sm {
   padding: 8px 20px;
   font-size: 0.85rem;
@@ -321,7 +339,25 @@ ul {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+  margin-bottom: 16px;
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.hero-beta-note {
+  font-size: 0.9rem;
+  color: var(--parchment);
+  opacity: 0.85;
   margin-bottom: 48px;
+}
+
+.hero-beta-note a {
+  color: var(--brand-bronze);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-beta-note a:hover {
+  color: var(--deep-bronze);
 }
 
 .hero-quote {
@@ -1595,6 +1631,12 @@ ul {
 
 .help-article-body strong {
   color: var(--relic-green);
+}
+
+.help-article-body a,
+.contact-form-wrapper p a {
+  color: var(--deep-bronze);
+  text-decoration: underline;
 }
 
 /* Help CTA */

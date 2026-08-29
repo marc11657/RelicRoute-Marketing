@@ -31,6 +31,36 @@
     onScroll();
   }
 
+  // --- Platform detection & smart store links ---
+  const STORE_URLS = {
+    ios: 'https://apps.apple.com/us/app/relicroute/id6799253953',
+    android: 'https://play.google.com/store/apps/details?id=com.relicroute.app&pcampaignid=web_share'
+  };
+
+  function detectPlatform() {
+    const ua = navigator.userAgent || '';
+    // iPadOS 13+ reports a desktop Mac UA; identify it via multi-touch support
+    const isIpadOs = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+    if (isIpadOs || /iPad|iPhone|iPod/.test(ua)) return 'ios';
+    if (/Android/.test(ua)) return 'android';
+    return null;
+  }
+
+  const platform = detectPlatform();
+
+  if (platform) {
+    document.documentElement.classList.add('platform-' + platform);
+
+    // Upgrade generic download CTAs to a direct store link. Must run before
+    // the smooth-scroll wiring below so a rewritten link is no longer
+    // treated as an in-page anchor.
+    document.querySelectorAll('a[data-store-link]').forEach(link => {
+      link.href = STORE_URLS[platform];
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
@@ -71,6 +101,14 @@
         }
       });
     });
+
+    // Auto-select the tab matching the visitor's device
+    if (platform) {
+      const matchingTab = document.querySelector('.platform-tab[data-platform="' + platform + '"]');
+      if (matchingTab && !matchingTab.classList.contains('active')) {
+        matchingTab.click();
+      }
+    }
   }
 
   // Accordion toggles (Help page)
