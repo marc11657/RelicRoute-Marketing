@@ -31,6 +31,26 @@
     onScroll();
   }
 
+  // Platform detection: smart store links + badge filtering.
+  // Must run before the smooth-scroll binder so rewritten links don't get anchor handlers.
+  const STORE_URLS = {
+    ios: 'https://apps.apple.com/us/app/relicroute/id6799253953',
+    android: 'https://play.google.com/store/apps/details?id=com.relicroute.app&pcampaignid=web_share'
+  };
+  const ua = navigator.userAgent;
+  const isIOS = /iPhone|iPad|iPod/.test(ua)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS 13+ reports as Mac
+  const platform = isIOS ? 'ios' : (/Android/.test(ua) ? 'android' : '');
+
+  if (platform) {
+    document.documentElement.setAttribute('data-platform', platform);
+    document.querySelectorAll('.js-smart-download').forEach(link => {
+      link.href = STORE_URLS[platform];
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {

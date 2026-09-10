@@ -321,7 +321,7 @@ ul {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
 }
 
 .hero-quote {
@@ -1032,6 +1032,77 @@ ul {
   font-size: 0.8rem;
   color: var(--parchment);
   opacity: 0.35;
+}
+
+/* ===================================================
+   STORE BADGES (App Store / Google Play)
+   =================================================== */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.store-badge {
+  display: inline-block;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.store-badge:hover {
+  transform: translateY(-2px);
+}
+
+.store-badge img {
+  display: block;
+  height: 54px;
+  width: auto;
+}
+
+.store-badges--footer {
+  margin-bottom: 20px;
+}
+
+.store-badges--footer .store-badge img {
+  height: 40px;
+}
+
+/* Show only the matching store badge on detected mobile platforms */
+html[data-platform="ios"] .store-badge[data-store="android"],
+html[data-platform="android"] .store-badge[data-store="ios"] {
+  display: none;
+}
+
+.hero-beta-link,
+.download-beta-note {
+  font-size: 0.95rem;
+  color: var(--parchment);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.hero-beta-link {
+  margin-bottom: 48px;
+}
+
+.download-beta-note {
+  margin-top: 28px;
+}
+
+.hero-beta-link a,
+.download-beta-note a,
+.page-hero-note a {
+  color: var(--brand-bronze);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-hero-note {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: var(--parchment);
+  opacity: 0.8;
 }
 
 /* ===================================================
@@ -1782,6 +1853,10 @@ ul {
   .btn-beta {
     width: 100%;
     max-width: 300px;
+  }
+
+  .store-badge img {
+    height: 46px;
   }
 
   .hero-quote {
